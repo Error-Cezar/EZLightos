@@ -1,5 +1,13 @@
 -- [?] : Not Required
 
+-- Environment.spawn :: Thread
+-- Arg1 : function to execute
+
+Environment.spawn(function()
+    print("This is ran on a seperate thread !")
+end)
+
+
 -- Environment.GetLen :: Number
 -- Arg1 : List Of ELS
 -- Arg2 : Prefix To Look For (example : prefix "cat" only looks car els that starts in "cat") [?]
