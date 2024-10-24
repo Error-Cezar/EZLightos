@@ -16,6 +16,7 @@ Environment.GetLen(ELS, "cat")
 
 Environment.GetELS(ELS, 1, 10, "ELS-") -- return ELS-1, ELS-2, ..., ELS-10
 
+
 -- Environment.Flicker :: nil
 -- Arg1 : ELS To Use
 -- Arg2 : Time ELS Is On
@@ -32,7 +33,9 @@ Environment.Flicker(v, .1, 2, {"Red, Blue"}, 5) -- Turn Red for .1 seconds, turn
 -- Arg3 : Time Between Each ELS (if list of provided) [?]
 
 Environment.Enable(v, "Red")
+
 Environment.Enable({v, t}, "Red") -- Turns v and t red
+
 Environment.Enable({v, t}, "Red", 1) -- Turns v red, wait 1 second, turn t red
 
 
@@ -42,3 +45,11 @@ Environment.Enable({v, t}, "Red", 1) -- Turns v red, wait 1 second, turn t red
 -- Arg3 : Value To Switch To [follows Arg2] [table or any]
 -- Arg4 : TweenInfo For Tweening [?] [No Tweening if Not Provided]
 -- Arg5 : If Function Yields Until Completion [?]
+
+Environment.Value(v, "Light", 1, TweenInfo.new(.5)) -- Tweens Light (spotlight) to 1 for 0.5 seconds
+
+Environment.Value(v, {"Light", "Lighto"}, {1, .5}, TweenInfo.new(.5)) -- Tweens Light (spotlight) to 1 and Lighto (UI) to 0.5 for 0.5 seconds
+
+Environment.Value(v, "Light", 1) -- Tweens Light (spotlight) to 1 instantly
+
+Environment.Value(v, {"Light", "Lighto"}, {1, .5}) -- Tweens Light (spotlight) to 1 and Lighto (UI) to 0.5 instantly
