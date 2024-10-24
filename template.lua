@@ -84,7 +84,10 @@ end
 function self.Takedown()
 end
 
-function self.Alley()
+function self.LAlley()
+end
+
+function self.LAlley()
 end
 
 function self.Cruise()
